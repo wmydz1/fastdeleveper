@@ -62,10 +62,16 @@ Main.java 部分代码
         s.setPhone("168888");
    
         Gson gson = new Gson();
+        // Object -> Json
         String jsonStr = gson.toJson(s);
-        
-          List<Student> students = new ArrayList<Student>();
+         // List -> Json
+         List<Student> students = new ArrayList<Student>();
          String jsonarray = gson.toJson(students);
+         
+         // Json -> Object
+        Student student = gson.fromJson(jsonStr, Student.class);
+        // Json -> List
+          List<Student> ss =gson.fromJson(jsonarray,new TypeToken<List<Student>>(){}.getType());
 ```
-
+___
 
