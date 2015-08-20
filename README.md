@@ -144,5 +144,8 @@ JSON.toJSONString(students)
 // 将类的信息写到json 这样解析不需要再传入要解析的类型
 JSON.toJSONString(student, SerializerFeature.WriteClassName)
 // 将Date类型转换为long 
-
+// Json -> Object ----j 为json字符串 String类型
+  Student sts = JSON.parseObject(j, Student.class);
+  // Json ->List ----js 为json字符串 String类型
+   List<Student> ss = JSON.parseArray(js, Student.class);
 ```
