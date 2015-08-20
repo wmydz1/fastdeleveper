@@ -148,4 +148,7 @@ JSON.toJSONString(student, SerializerFeature.WriteClassName)
   Student sts = JSON.parseObject(j, Student.class);
   // Json ->List ----js 为json字符串 String类型
    List<Student> ss = JSON.parseArray(js, Student.class);
+   // Json -> T
+     Result art = JSON.parseObject(str, new TypeReference<Result<Student>>() {
+        });
 ```
