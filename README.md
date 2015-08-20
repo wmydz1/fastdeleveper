@@ -75,3 +75,54 @@ Main.java 部分代码
 ```
 ___
 
+## 泛型的使用
+```
+public class Result<T> {
+    private int status;
+    private String message;
+    private T data;
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
+
+}
+
+
+```
+
+```
+    private void createBean() {
+        Result<Student> result = new Result<Student>();
+        result.setStatus(1);
+        result.setMessage("登陆成功");
+        Student s = new Student();
+        s.setAge(100);
+        s.setName("samchen");
+        s.setId(1);
+        result.setData(s);
+        Gson gson = new Gson();
+        Log.i("sss", gson.toJson(result));
+    }
+
+```
