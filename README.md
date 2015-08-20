@@ -151,4 +151,8 @@ JSON.toJSONString(student, SerializerFeature.WriteClassName)
    // Json -> T
      Result art = JSON.parseObject(str, new TypeReference<Result<Student>>() {
         });
+        
+        // 多种类型解析
+         String json = "[{sname:sam,age:100},{tanme:mm,age:18}]";
+        JSON.parseArray(json,new Type[]{Student.class,Teacher.class});
 ```
