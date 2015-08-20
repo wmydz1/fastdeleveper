@@ -131,3 +131,18 @@ public class Result<T> {
     }
 
 ```
+
+## fastjson
+
+```
+
+ Student student = new Student();
+// Object -> Json
+JSON.toJSONString(student)
+// List -> Json
+JSON.toJSONString(students)
+// 将类的信息写到json 这样解析不需要再传入要解析的类型
+JSON.toJSONString(student, SerializerFeature.WriteClassName)
+// 将Date类型转换为long 
+
+```
