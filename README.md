@@ -122,7 +122,12 @@ public class Result<T> {
         s.setId(1);
         result.setData(s);
         Gson gson = new Gson();
+        // T -> Json
         Log.i("sss", gson.toJson(result));
+      //  Json ->T
+         Result rt = gson.fromJson(str, new TypeToken<Result<Student>>() {
+        }.getType());
+        Log.i("rr",rt.getMessage());
     }
 
 ```
